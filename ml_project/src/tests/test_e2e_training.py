@@ -17,7 +17,7 @@ from entities import (
 
 @pytest.fixture
 def params():
-    params = read_training_pipeline_params('.ml_project/configs/train_config.yml')
+    params = read_training_pipeline_params('ml_project/configs/train_config.yml')
     return params
 
 
