@@ -1,0 +1,14 @@
+FROM python:3.9
+
+COPY requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
+
+COPY dist/ml_project-0.1.0.tar.gz /ml_project-0.1.0.tar.gz
+RUN pip install /ml_project-0.1.0.tar.gz
+
+COPY configs/ /configs
+RUN mkdir -p /models
+
+WORKDIR .
+
+CMD ["src/train_pipeline", "configs/train_config.yml"]
