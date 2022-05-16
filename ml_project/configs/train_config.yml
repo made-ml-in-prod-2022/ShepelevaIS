@@ -1,0 +1,33 @@
+downloading_params:
+  s3_bucket: "s3_data"
+  s3_path: "data.csv"
+  output_folder: "data/raw/"
+input_data_path: "data/raw/data.csv"
+output_model_path: "models/model.pkl"
+metric_path: "models/metrics.json"
+splitting_params:
+  val_size: 0.2
+  random_state: 39
+  stratify_col: "Exited"
+train_params:
+  model_type: "RandomForestClassifier"
+  random_state: 48
+  threshold: 0.5
+feature_params:
+  categorical_features:
+    - "Geography"
+    - "Gender"
+    - "Tenure"
+  numerical_features:
+    - "CreditScore"
+    - "Age"
+    - "Balance"
+    - "NumOfProducts"
+    - "HasCrCard"
+    - "IsActiveMember"
+    - "EstimatedSalary"
+  features_to_drop:
+    - "RowNumber"
+    - "CustomerId"
+    - "Surname"
+  target_col: "Exited"
