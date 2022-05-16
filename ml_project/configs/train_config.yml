@@ -1,10 +1,10 @@
 downloading_params:
   s3_bucket: "s3_data"
   s3_path: "data.csv"
-  output_folder: "data/raw/"
-input_data_path: "data/raw/data.csv"
-output_model_path: "models/model.pkl"
-metric_path: "models/metrics.json"
+  output_folder: "ml_project/data/raw/"
+input_data_path: "ml_project/data/raw/data.csv"
+output_model_path: "ml_project/models/model.pkl"
+metric_path: "ml_project/models/metrics.json"
 splitting_params:
   val_size: 0.2
   random_state: 39
